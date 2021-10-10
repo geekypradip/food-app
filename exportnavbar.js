@@ -1,6 +1,6 @@
 function fetchNavbarHTML(){
         return `<h1>Get Recipe</h1>
-        <div>search Recipe By name</div>
+        <div>search Recipe</div>
         <div>Recipi of the day</div>
         <div>latest Recipe</div>`
     }
@@ -32,11 +32,13 @@ function fetchNavbarHTML(){
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-radius:10px;
   }
   #nav > div:hover {
     background-color: rgb(186, 142, 228);
     color: rgb(20, 2, 37);
     transition: 0.5s;
+   
   }
   `
     }

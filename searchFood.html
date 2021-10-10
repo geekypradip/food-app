@@ -6,11 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>search food</title>
     <!-- <link rel="stylesheet" href="nav.css"> -->
+  <style>
+      body{
+          background-image: url("https://wallpapercave.com/wp/wp1929494.jpg");
+          background-size: cover;
+      }
+      .fogColor{
+          width:100%;
+          background: rgba(0, 0, 0, 0.349);
+          height:100%;
+      }
+      .container{
+          width:80%;
+          margin: auto;
+          padding-top: 10px;
+      }
+      .container>input{
+          border:none;
+        width:50%;
+        height: 40px;
+        color:rgb(76, 219, 20);
+        border-bottom:1px solid hotpink;
+        border-radius: 7px;
+      }
+      .container>#search{
+          background: indigo;
+          font-weight: bold;
+          padding-top: 13px;
+          padding-bottom: 13px;
+          width: 100px;
+          border: none;
+          border-radius: 7px;
+          color: aliceblue;
+         
+      }
+      .container>#search:hover{
+          border:1px solid black;
+      }
+      #img_size{
+          width:200px;
+          background-size: cover;
+      }
+      #loading{
+         text-align: center;
+         width:150px;
+
+      }
+  </style>
 </head>
 <body>
+    <div class="fogColor">
     <div class="container">
-
+      <input type="text" placeholder="search your recipe">
+      <button id="search">search</button>
     </div>
+</div>
+
     <script type="module" src="importnavbar.js"></script>
+    <script>
+         let showdata=document.createElement('div');
+            document.getElementById('search').addEventListener('click',()=>{
+        let food=document.querySelector('input').value;
+        if(!food){
+            alert("enter your desire food!!")
+        return;
+        }
+       showdata.innerHTML=`<img id="loading" src="https://c.tenor.com/5o2p0tH5LFQAAAAi/hug.gif">`;
+       document.querySelector('.container').append(showdata);
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`)
+    .then((Response)=>{
+        console.log(Response)
+        return Response.json();
+       
+    })
+    .then((Response)=>{
+        console.log("ready")
+        showdata.innerHTML=null;
+        console.log(Response.meals)
+        getDetais(Response.meals);
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+    let getDetais=(foods)=>{
+       
+        if(!foods){
+             showdata.innerHTML=`<h1>your requested recipi not found!</h1>`;
+            document.querySelector('.container').append(showdata);
+            return;
+        }
+       
+       
+       for(food in foods) {
+        console.log(food)
+           var recipiImage=document.createElement('img');
+           recipiImage.id='img_size'
+           recipiImage.src=foods[food].strMealThumb;
+           showdata.appendChild(recipiImage);
+       }
+      
+    }
+    })
+    </script>
 </body>
 </html>
