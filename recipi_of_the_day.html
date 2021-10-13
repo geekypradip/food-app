@@ -1,0 +1,35 @@
+<!-- Problem
+Create a recipe of the day feature.
+As you open this page, a random recipe should be visible
+Users should be able to see all the details of that recipe. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipi of the day</title>
+    <link rel="stylesheet" href="uistyle.css">
+    <style>
+        body{
+            margin:0;
+            background-image: url("https://www.desktopbackground.org/p/2013/08/04/617971_delicious-food-wallpapers-cool-hd_2048x1536_h.jpg");
+            background-size: cover;
+        }
+        .backgroundPhotoshadow{  
+          width:100%;
+          background: rgba(0, 0, 0, 0.658);
+          height:100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="fogColor">
+        <div class="container">
+        </div>
+    </div>
+    <script type="module" src="importnavbar.js"></script>
+    <script type="module" src="fetchRandomRecipi.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html>

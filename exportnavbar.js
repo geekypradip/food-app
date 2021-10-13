@@ -1,11 +1,11 @@
 function fetchNavbarHTML(){
         return `<h1>Get Recipe</h1>
-        <div>search Recipe</div>
-        <div>Recipi of the day</div>
-        <div>latest Recipe</div>`
+        <div onclick="navigation(1)">search Recipe</div>
+        <div onclick="navigation(2)">Recipi of the day</div>
+        <div onclick="navigation(3)">latest Recipe</div>`
     }
-    export function fetchNavbarCSS(){
-   return `body {
+   let fetchNavbarCSS=()=> {
+  return `body {
     margin: 0;
   }
   #nav {
@@ -40,8 +40,8 @@ function fetchNavbarHTML(){
     transition: 0.5s;
    
   }
-  `
-    }
+  `;
+}
     export default fetchNavbarHTML;
-
+    export {fetchNavbarCSS};
 //Note:you can change the default function name where you are importing,,but non default export function name you can't change during import.
