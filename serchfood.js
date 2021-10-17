@@ -25,6 +25,8 @@ showdata.append(ui)
 })
 .catch((err)=>{
 console.log(err)
+showdata.innerHTML="<h1 id='err'>Connection failed! check your connection and refresh the page</h1>";
+document.querySelector('#err').style.color="red"
 })
 
 })

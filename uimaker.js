@@ -54,17 +54,20 @@ let viewport=document.createElement('div')
     if(foods[food].strIngredient20!==""&&foods[food].strIngredient20!==null){var item20=document.createElement('p');item20.textContent=`${foods[food].strIngredient20}->${foods[food].strMeasure20}`;dataContainer.appendChild(item20)}
     recipiContainer.appendChild(dataContainer)  
     
-    
-    // for(let i=1;i<=20;i++){
-    //     let temp="strIngredient"+i;
-    //     console.log(foods[food].);
-    // if(foods[food].temp!==""){
-    //     let items=document.createElement('h6');
-    //     items.textContent=`${i})${foods[food].strIngredient}${i}->${foods[food].strMeasure}${i}`;dataContainer.appendChild(items);
-    // }
-    // else
-    // break;
-    // }
+   /*Testing code strat*/ 
+//     for(let i=1;i<=20;i++){
+//         //let temp="strIngredient"+i;
+//         //console.log(foods[food].);
+//  console.log(eval('strIngredient'+i))
+//     // if(foods[food].window['strIngredient'+i]!==""&&foods[food].window['strIngredient'+i]!==null){
+//     //     let items=document.createElement('p');
+//     //     items.textContent=`${i})${foods[food].window['strIngredient'+i]}->${foods[food].window['strIngredient'+i]}`;dataContainer.appendChild(items);
+//     // }
+//     // else
+//     // break;
+//     }
+//     recipiContainer.appendChild(dataContainer)  
+/*testing code end */
     //.......need more
     let instructions=document.createElement('div');
     let insheading=document.createElement('h4');
