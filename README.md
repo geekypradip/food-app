@@ -9,3 +9,5 @@ strongly suggest: use live server for run this app.
 <p>navbar I used as component->exportnavbar.js:create all i.e css and html through javascript.
 importnavbar.js:here i import two function from exportnavbar.js ..those are for html and css and use on my html page where it's required</p>
 <p>1)searchFood.html: main and landing page user can search for a perticular o related meals </p>
+#screen shot
+<img src="https://raw.githubusercontent.com/geekypradip/images/main/Screenshot%20from%202021-10-13%2018-53-59.png"/>
