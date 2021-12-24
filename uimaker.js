@@ -88,3 +88,4 @@ let viewport=document.createElement('div')
     return viewport;
     }
     export default getDetais;
+    
